@@ -1,0 +1,39 @@
+---
+import ProjectCard from "../components/project-card.astro";
+import { getProjectImages } from "../utils/imageFinder";
+import { projects } from "../datas/projects";
+---
+
+<section class="py-20 px-6 bg-muted/30">
+  <div class="container mx-auto">
+    <div class="flex justify-between items-center mb-12">
+      <h2 class="text-4xl font-bold">PROJECTS</h2>
+      <a
+        href="/projects"
+        class="text-primary hover:text-primary/80 inline-flex items-center gap-2"
+      >
+        See all projects
+        <!-- ArrowRight SVG icon -->
+        <svg
+          class="h-4 w-4 ml-2"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          ><path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg
+        >
+      </a>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {
+        projects.map((project) => {
+          const images = getProjectImages(project.title);
+          return <ProjectCard {...project} images={images} />;
+        })
+      }
+    </div>
+  </div>
+</section>
