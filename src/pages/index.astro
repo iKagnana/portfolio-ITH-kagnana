@@ -1,16 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import HeroSection from "../components/hero-section.astro";
-import AboutSection from "../components/about-section.astro";
-import ProjectsSection from "../components/projects-section.astro";
-import ContactSection from "../components/contact-section.astro";
+import HeroSection from "../components/section/hero-section.astro";
+import AboutLightSection from "../components/section/about-light-section.astro";
+import ProjectsSection from "../components/section/projects-section.astro";
+import ContactSection from "../components/section/contact-section.astro";
 import "../styles/globals.css";
 ---
 
 <Layout title="Portfolio">
   <main class="min-h-screen">
     <HeroSection />
-    <AboutSection />
+    <AboutLightSection />
     <ProjectsSection />
     <ContactSection />
   </main>

@@ -2,7 +2,6 @@
 import Layout from "../../layouts/Layout.astro";
 import { projects } from "../../datas/projects";
 import { getProjectImages } from "../../utils/imageFinder";
-import Footer from "../../components/footer.astro";
 import "../../styles/globals.css";
 
 export async function getStaticPaths() {
@@ -77,7 +76,7 @@ const projectData = {
           <div class="flex flex-wrap gap-2 mb-6">
             {
               projectData.tags.map((tag) => (
-                <span class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium border-transparent bg-secondary text-secondary-foreground">
+                <span class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium border-transparent bg-secondary text-primary">
                   {tag}
                 </span>
               ))

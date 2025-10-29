@@ -1,0 +1,63 @@
+---
+const skillCategories = [
+  {
+    category: "Frameworks & Libraries",
+    skills: ["React", "Next.js", "Tailwind CSS", "Node.js", "SwiftUI"],
+  },
+  {
+    category: "Languages",
+    skills: ["JavaScript", "TypeScript", "Swift", "Python", "C#"],
+  },
+  {
+    category: "Soft Skills",
+    skills: [
+      "Communication",
+      "Problem Solving",
+      "Project Management",
+      "Creativity",
+    ],
+  },
+];
+---
+
+<section class="py-20 px-4 md:px-8 lg:px-16 max-w-6xl mx-auto">
+  <div class="max-w-6xl mx-auto">
+    <div class="mb-12">
+      <h2 class="text-4xl md:text-5xl font-bold mb-2 text-balance">
+        My Skills
+      </h2>
+      <div class="h-1 w-20 bg-primary rounded-full"></div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      {
+        skillCategories.map((category) => (
+          <div class="space-y-4">
+            <h3 class="text-xl font-semibold text-foreground">
+              {category.category}
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              {category.skills.map((skill) => (
+                <span class="px-4 py-2 bg-primary text-primary-foreground rounded-full text-sm font-medium hover:opacity-90 transition-opacity">
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="mt-12 gap-8">
+      <div class="bg-background rounded-lg p-6 border border-border">
+        <h4 class="font-semibold mb-3 text-foreground">Experience</h4>
+        <p class="text-muted-foreground leading-relaxed">
+          3 years of experience in software development. I have experience Web
+          development, including building responsive websites and web
+          applications. For now, I am focusing on iOS development using Swift
+          and SwiftUI to create engaging mobile applications.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
