@@ -3,9 +3,10 @@
 ---
 
 <header class="fixed top-0 left-0 right-0 z-50 bg-background/90">
-  <div class="fixed top-6 left-1/2 -translate-x-1/2 z-50">
+  <!-- Desktop Navigation -->
+  <div class="hidden md:fixed md:block top-6 left-1/2 -translate-x-1/2 z-50">
     <nav
-      class="flex items-center gap-16 px-16 py-4 bg-secondary backdrop-blur-sm rounded-full"
+      class="flex items-center gap-8 lg:gap-16 px-8 lg:px-16 py-4 bg-secondary backdrop-blur-sm rounded-full"
     >
       <a
         href="/#"
@@ -52,4 +53,94 @@
       </a>
     </nav>
   </div>
+
+  <!-- Mobile Navigation -->
+  <div class="md:hidden flex items-center justify-between px-6 py-4">
+    <a href="/#" class="text-primary font-semibold text-lg tracking-wide">KI</a>
+
+    <button
+      id="mobile-menu-button"
+      class="text-primary/70 hover:text-primary transition-colors focus:outline-none"
+      aria-label="Toggle menu"
+    >
+      <svg
+        id="menu-icon"
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+      <svg
+        id="close-icon"
+        class="w-6 h-6 hidden"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <nav
+    id="mobile-menu"
+    class="md:hidden hidden flex-col gap-4 px-6 py-4 bg-secondary/95 backdrop-blur-sm"
+  >
+    <a
+      href="/#"
+      class="group relative text-sm tracking-widest text-primary/70 hover:text-primary transition-colors uppercase py-2"
+      >Home
+    </a>
+    <a
+      href="/#about"
+      class="group relative text-sm tracking-widest text-primary/70 hover:text-primary transition-colors uppercase py-2"
+      >About
+    </a>
+    <a
+      href="/#projects"
+      class="group relative text-sm tracking-widest text-primary/70 hover:text-primary transition-colors uppercase py-2"
+      >Projects
+    </a>
+    <a
+      href="mailto:ikagnana@gmail.com"
+      class="group relative text-sm tracking-widest text-primary/70 hover:text-primary transition-colors uppercase py-2"
+      >Contact
+    </a>
+  </nav>
 </header>
+
+<script>
+  const mobileMenuButton = document.getElementById("mobile-menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const menuIcon = document.getElementById("menu-icon");
+  const closeIcon = document.getElementById("close-icon");
+
+  mobileMenuButton?.addEventListener("click", () => {
+    mobileMenu?.classList.toggle("hidden");
+    mobileMenu?.classList.toggle("flex");
+    menuIcon?.classList.toggle("hidden");
+    closeIcon?.classList.toggle("hidden");
+  });
+
+  // Close mobile menu when clicking on a link
+  const mobileLinks = mobileMenu?.querySelectorAll("a");
+  mobileLinks?.forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileMenu?.classList.add("hidden");
+      mobileMenu?.classList.remove("flex");
+      menuIcon?.classList.remove("hidden");
+      closeIcon?.classList.add("hidden");
+    });
+  });
+</script>
