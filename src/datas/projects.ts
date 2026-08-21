@@ -1,7 +1,7 @@
 interface Project {
   id: string;
   title: string;
-  date: string;
+  date: Date;
   description: string;
   longDescription?: string;
   links?: {
@@ -15,11 +15,11 @@ interface Project {
   technologies?: string[];
 }
 
-export const projects: Project[] = [
+const _projects: Project[] = [
   {
     id: "1",
     title: "Breezy",
-    date: "July 2025",
+    date: new Date("2025-07-01"),
     description: "Twitter like built with Next.js, Tailwind CSS.",
     longDescription:
       "A Twitter-like web application built with Next.js and Tailwind CSS, featuring real-time updates, user authentication, and a responsive design. The project showcases my skills in modern web development and UI/UX design.",
@@ -59,7 +59,7 @@ export const projects: Project[] = [
   {
     id: "2",
     title: "EasySave",
-    date: "February 2025",
+    date: new Date("2025-02-01"),
     description:
       "EasySave is a data backup software developed to let users easily create, manage, and execute up to 5 backup jobs, either full or differential.",
     longDescription:
@@ -80,7 +80,7 @@ export const projects: Project[] = [
   {
     id: "3",
     title: "GSBStock",
-    date: "June 2024",
+    date: new Date("2024-06-01"),
     description:
       "It enables users—administrators, employees, and clients—to track, order, and control stock levels through a secure interface, with access levels tailored to each user role.",
     longDescription:
@@ -108,7 +108,7 @@ export const projects: Project[] = [
   {
     id: "4",
     title: "eMeds",
-    date: "May 2024",
+    date: new Date("2024-05-01"),
     description:
       "eMEDS is a desktop application for doctors to manage patient prescriptions, including allergies, medical history, and medication compatibility checks.",
     longDescription:
@@ -135,7 +135,7 @@ export const projects: Project[] = [
   {
     id: "5",
     title: "Taskies",
-    date: "September 2023",
+    date: new Date("2023-09-01"),
     description: "Task management application.",
     longDescription:
       "Taskies centralizes task management and communication for employees, allowing administrators to create users and assign roles, directors and referents to distribute tasks, and employees to view and update their own work. It utilizes a modern tech stack including TypeScript, React, Node.js, Docker, and MongoDB, with user authentication and role-based access control for security and flexibility.",
@@ -171,7 +171,7 @@ export const projects: Project[] = [
   {
     id: "6",
     title: "Plenty",
-    date: "February 2023",
+    date: new Date("2023-02-01"),
     description:
       "Plenty is a mobile app designed to help users optimize their grocery shopping by finding the best deals, creating custom shopping lists, and saving their favorite products.",
     longDescription:
@@ -214,4 +214,113 @@ export const projects: Project[] = [
       "MongoDB",
     ],
   },
+  {
+    id: "7",
+    title: "CESI Smart Key System",
+    date: new Date("2026-07-01"),
+    description:
+      "Real-time classroom key management system using RFID/NFC, ZigBee, MQTT and Edge Computing architecture.",
+    longDescription:
+      "A complete IoT system for tracking classroom keys in real-time using RFID/NFC technology with Arduino Uno R4 WiFi and RC522 readers. The system implements a ZigBee mesh network (XBee S2C modules) for reliable communication across 40+ rooms. Data is transmitted via MQTT protocol to an Edge Computing gateway that processes events locally without cloud dependency. The architecture includes a Python backend with Flask and SocketIO for real-time dashboard updates, and a React-based frontend for visualizing key states (IN/OUT). The system features local storage of events, secure communication with AES encryption, and automatic room discovery. Perfect for educational institutions needing to track physical key distribution with modern IoT technologies.",
+    links: {
+      github: "https://github.com/yourusername/cesi-smart-key-system",
+    },
+    tags: [
+      "IoT",
+      "Edge Computing",
+      "Arduino",
+      "RFID/NFC",
+      "ZigBee",
+      "MQTT",
+      "Python",
+      "Flask",
+      "React",
+      "FISA INFO A3",
+    ],
+    features: [
+      "Real-time key tracking with RFID/NFC technology",
+      "ZigBee mesh network for 40+ rooms communication",
+      "MQTT protocol for lightweight messaging",
+      "Edge Computing architecture (no cloud dependency)",
+      "Local event storage and processing",
+      "AES encryption for secure communication",
+      "Automatic room discovery and dynamic dashboard",
+      "Python backend with Flask and SocketIO",
+      "React frontend for real-time visualization",
+      "Arduino Uno R4 WiFi with RC522 RFID reader",
+      "XBee S2C ZigBee modules in API mode",
+      "Mosquitto MQTT broker for message brokering",
+    ],
+    technologies: [
+      "Arduino",
+      "C++",
+      "Python",
+      "JavaScript",
+      "React",
+      "MQTT",
+      "ZigBee",
+      "RFID/NFC",
+      "Flask",
+      "Socket.IO",
+      "Docker",
+      "XBee",
+    ],
+  },
+  {
+    id: "8",
+    title: "CHU Big data",
+    date: new Date("2026-02-01"),
+    description:
+      "Healthcare data lakehouse architecture for analyzing medical consultation and hospitalization rates using Delta Lake, Spark, and Trino.",
+    longDescription:
+      "A comprehensive Big Data architecture for healthcare analytics that processes and analyzes medical data from various sources. The system implements a Lakehouse pattern using Delta Lake as the storage layer, Apache Spark for distributed data processing, and Trino as the SQL query engine. PostgreSQL serves as the initial data source, with MinIO providing object storage simulating a data lake. The architecture enables analysis of consultation rates, hospitalization trends, patient demographics, and satisfaction metrics across different regions and time periods. The solution includes data ingestion pipelines, transformation workflows, and visualization dashboards in Apache Superset. All components are containerized using Docker for easy deployment and scalability.",
+    links: {
+      github: "https://github.com/yourusername/big-data-health-lakehouse",
+    },
+    tags: [
+      "Big Data",
+      "Data Lakehouse",
+      "Delta Lake",
+      "Apache Spark",
+      "Trino",
+      "PostgreSQL",
+      "MinIO",
+      "Apache Superset",
+      "Docker",
+      "Python",
+      "SQL",
+    ],
+    features: [
+      "Lakehouse architecture with Delta Lake storage",
+      "Distributed data processing with Apache Spark",
+      "SQL query engine via Trino",
+      "PostgreSQL for initial data ingestion",
+      "MinIO object storage simulating data lake",
+      "Containerized deployment with Docker",
+      "Data analysis on consultation rates by region/time",
+      "Hospitalization trend analysis with demographic breakdowns",
+      "Satisfaction metrics visualization",
+      "Real-time data processing pipeline",
+      "Secure data storage and access control",
+      "Scalable architecture for healthcare analytics",
+      "Automated data ingestion workflows",
+      "Interactive dashboards in Apache Superset",
+    ],
+    technologies: [
+      "Delta Lake",
+      "Apache Spark",
+      "Trino",
+      "PostgreSQL",
+      "MinIO",
+      "Apache Superset",
+      "Python",
+      "Docker",
+      "SQL",
+      "JDBC/ODBC",
+    ],
+  },
 ];
+
+export const projects: Project[] = _projects.sort(
+  (a, b) => b.date.getTime() - a.date.getTime(),
+);

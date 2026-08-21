@@ -5,7 +5,6 @@ import { getProjectImages } from "../../utils/imageFinder";
 import ProjectCard from "../../components/card/project-card.astro";
 import "../../styles/globals.css";
 
-// Get images for projects
 const projectsWithImages = projects.map((project) => ({
   ...project,
   images: getProjectImages(project.title),
