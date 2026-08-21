@@ -217,7 +217,7 @@ const _projects: Project[] = [
   {
     id: "7",
     title: "CESI Smart Key System",
-    date: new Date("2026-07-01"),
+    date: new Date("2026-02-01"),
     description:
       "Real-time classroom key management system using RFID/NFC, ZigBee, MQTT and Edge Computing architecture.",
     longDescription:
@@ -269,7 +269,7 @@ const _projects: Project[] = [
   {
     id: "8",
     title: "CHU Big data",
-    date: new Date("2026-02-01"),
+    date: new Date("2025-10-01"),
     description:
       "Healthcare data lakehouse architecture for analyzing medical consultation and hospitalization rates using Delta Lake, Spark, and Trino.",
     longDescription:
