@@ -1,0 +1,73 @@
+---
+const experiences = [
+  {
+    period: "Jul 2026 — Sep 2026",
+    role: "Research Intern",
+    company: "LASSENA · Montréal, Canada",
+    description:
+      "Updated a data-acquisition analysis framework and automated the creation of new Jupyter notebooks to make research workflows more efficient and reproducible.",
+    technologies: ["Python", "Jupyter", "Data analysis"],
+  },
+  {
+    period: "Jun 2026",
+    role: "Research Intern",
+    company: "CESI LINEACT · Lyon, France",
+    description:
+      "Scanned and used 3D models of lauzes for water-infiltration physics simulations in Jupyter notebooks. Created a Streamlit application for manually aligning the lauzes.",
+    technologies: ["Python", "Streamlit", "Jupyter", "3D"],
+  },
+  {
+    period: "Sep 2023 — Present",
+    role: "iOS Developer",
+    company: "WIMOVA · Lyon, France",
+    description:
+      "Designed an intuitive SwiftUI interface and deployed the application through App Store Connect. Built a modular VIPER architecture with Swift 6 concurrency, wrote technical documentation and unit tests, and contributed to debugging, stability, and performance improvements.",
+    technologies: ["SwiftUI", "Swift 6", "VIPER", "Unit testing"],
+  },
+  {
+    period: "Sep 2022 — Sep 2023",
+    role: "Full-stack Developer",
+    company: "PARTNER FORMATION · Lyon, France",
+    description:
+      "Built and maintained MERN web applications, created REST APIs with Node.js and Express, implemented MongoDB CRUD features, and contributed through Git branching and pull requests. Developed reusable components and resolved client- and server-side issues.",
+    technologies: ["MongoDB", "Express", "React", "Node.js", "Git"],
+  },
+];
+---
+
+<section id="experience" class="bg-primary py-24 px-4 text-primary-foreground md:px-8 lg:px-16">
+  <div class="mx-auto max-w-6xl">
+    <div class="mb-16 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+      <div>
+        <p class="mb-3 font-mono text-xs uppercase tracking-[0.25em] text-primary-foreground/60">01 / Career</p>
+        <h2 class="text-4xl font-bold tracking-tight md:text-5xl">Professional experience</h2>
+      </div>
+      <p class="max-w-sm text-sm leading-6 text-primary-foreground/70">A growing practice shaped by curiosity, collaboration, and a commitment to useful software.</p>
+    </div>
+
+    <div class="divide-y divide-primary-foreground/20 border-y border-primary-foreground/20">
+      {experiences.map((experience) => (
+        <article class="grid gap-6 py-8 md:grid-cols-[10rem_1fr] md:gap-12">
+          <p class="font-mono text-xs uppercase tracking-wider text-primary-foreground/60">{experience.period}</p>
+          <div class="grid gap-5 md:grid-cols-[1fr_auto] md:gap-10">
+            <div>
+              <h3 class="text-2xl font-semibold tracking-tight">{experience.role}</h3>
+              <p class="mt-1 text-sm text-primary-foreground/65">{experience.company}</p>
+              <p class="mt-5 max-w-2xl text-sm leading-7 text-primary-foreground/80">{experience.description}</p>
+            </div>
+            <div class="flex flex-wrap content-start gap-2 md:max-w-40 md:justify-end">
+              {experience.technologies.map((technology) => (
+                <span class="border border-primary-foreground/25 px-3 py-1 font-mono text-[11px] text-primary-foreground/70">{technology}</span>
+              ))}
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  section :global(article) { transition: background-color 180ms ease; }
+  section :global(article:hover) { background-color: hsl(var(--primary-foreground) / 0.05); }
+</style>
