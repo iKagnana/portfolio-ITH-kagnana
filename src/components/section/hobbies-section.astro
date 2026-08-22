@@ -1,64 +1,118 @@
 ---
+import { Brush, BookMarked, Plane, Music, CookingPot } from "lucide-react";
+
 const hobbies = [
   {
     title: "Digital and traditional drawing",
-    description: "Expressing creativity through art in various forms",
-    icon: "✏️",
+    description:
+      "Expressing creativity through art in various forms. I enjoy both digital and traditional mediums, exploring different techniques and styles. As we say : 'trust the process'. It's a journey of continuous learning and improvement.",
+    techLink:
+      "Translates to an eye for intuitive UI design. It is important to have solid base to build something great.",
+    icon: Brush,
+    iconLabel: "Drawing icon",
   },
   {
     title: "Reading",
-    description: "Diving into stories and discovering new perspectives",
-    icon: "📚",
+    description:
+      "Diving into entertaining stories to open my mind to entirely different perspectives. I also enjoy reading non-fiction books to learn about new topics and expand my knowledge.",
+    techLink:
+      "Builds mental flexibility for complex problem-solving and algorithmic thinking. Moreover, it shows that i am not afraid of reading documentation and learning new technologies.",
+    icon: BookMarked,
+    iconLabel: "Reading icon",
   },
   {
     title: "Travel",
-    description: "Exploring new cultures and broadening my horizons",
-    icon: "✈️",
+    description:
+      "Exploring new cultures and broadening my horizons. Discovering the world and its diverse ways of life. I also learned a lot about myself and how i have to go out of my comfort zone to grow.",
+    techLink:
+      "Fosters adaptability for navigating new tech ecosystems. Encourages cultural awareness and global perspective.",
+    icon: Plane,
+    iconLabel: "Travel icon",
   },
   {
     title: "Music",
-    description: "Listening to diverse genres and discovering new artists",
-    icon: "🎵",
+    description:
+      "Listening to diverse genres and discovering new artists. I am also interested on learning to play the guitar and piano. My dream instrument is the saxophone.",
+    techLink:
+      "Creates the ideal flow state for deep coding sessions. Enhances pattern recognition and problem-solving skills.",
+    icon: Music,
+    iconLabel: "Music icon",
   },
   {
     title: "Cooking & eating",
-    description: "Experimenting with new recipes and flavors",
-    icon: "👨‍🍳",
+    description:
+      "Experimenting with new recipes and flavors. I also enjoy sharing meals with friends and family and discover new cultures through their cuisine.",
+    techLink:
+      "Encourages creativity and precision, essential for coding and debugging.",
+    icon: CookingPot,
+    iconLabel: "Cooking icon",
   },
 ];
 ---
 
-<section class="py-20 px-4 md:px-8 lg:px-16 max-w-6xl mx-auto">
-  <div class="space-y-12">
-    <div>
-      <h2 class="text-4xl md:text-5xl font-bold mb-2 text-balance">
-        My Hobbies
-      </h2>
-      <div class="h-1 w-20 bg-primary rounded-full"></div>
+<section id="hobbies" class="px-4 py-24 md:px-8 lg:px-16">
+  <div class="mx-auto max-w-6xl space-y-12">
+    <div class="grid gap-5 md:grid-cols-[1fr_1.2fr] md:items-end">
+      <div>
+        <p
+          class="mb-3 font-mono text-xs uppercase tracking-[0.25em] text-primary/60"
+        >
+          Off-screen
+        </p>
+        <h2 class="text-4xl font-bold tracking-tight md:text-5xl">Hobbies</h2>
+      </div>
+      <p class="max-w-xl text-sm leading-7 text-muted-foreground">
+        The interests that keep curiosity active beyond the screen and bring
+        fresh perspective back into my work.
+      </p>
     </div>
 
-    <p class="text-lg text-muted-foreground max-w-2xl">
-      Outside of work, I love cultivating my passions and exploring new
-      interests. Here are some of the activities I'm passionate about:
-    </p>
-
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
       {
-        hobbies.map((hobby) => (
-          <div class="group bg-card rounded-lg p-6 border border-border hover:border-primary transition-colors hover:shadow-lg">
-            <div class="text-4xl mb-4">{hobby.icon}</div>
-            <h3 class="text-xl font-semibold mb-2 text-foreground group-hover:text-primary transition-colors">
-              {hobby.title}
-            </h3>
-            <p class="text-muted-foreground leading-relaxed">
-              {hobby.description}
-            </p>
-          </div>
-        ))
+        hobbies.map((hobby) => {
+          // Astro requires dynamic components to be capitalized
+          const Icon = hobby.icon;
+
+          return (
+            <article class="group flex flex-col rounded-xl border border-border bg-card p-6 transition-transform duration-200 hover:-translate-y-1 hover:border-primary hover:shadow-[8px_8px_0_hsl(var(--primary)/0.12)]">
+              <div class="mb-10 flex items-start justify-between">
+                <span
+                  class="flex h-10 w-10 items-center justify-center rounded-full border border-primary/30 font-serif text-2xl text-primary"
+                  role="img"
+                  aria-label={hobby.iconLabel}
+                >
+                  <Icon className="w-4 h-4" />
+                </span>
+                <span class="font-mono text-xs uppercase tracking-wider text-muted-foreground">
+                  Interest
+                </span>
+              </div>
+
+              <div class="flex-grow">
+                <h3 class="text-xl font-semibold tracking-tight group-hover:text-primary">
+                  {hobby.title}
+                </h3>
+                <p class="mt-3 text-sm leading-7 text-muted-foreground">
+                  {hobby.description}
+                </p>
+              </div>
+
+              {/* The separated Computer Science highlight */}
+              <div class="mt-6 border-t border-border/50 pt-4">
+                <p class="text-xs font-medium text-primary/60 flex gap-2">
+                  <span class="select-none">↳</span>
+                  {hobby.techLink}
+                </p>
+              </div>
+            </article>
+          );
+        })
       }
     </div>
 
-    <div class="bg-primary text-primary-foreground rounded-lg p-8 text-center">
+    <div
+      class="rounded-xl border border-primary bg-primary p-8 text-primary-foreground"
+    >
       <h3 class="text-2xl font-bold mb-3">Always Seeking New Experiences</h3>
       <p class="text-lg opacity-90">
         I believe that life is a continuous adventure. Every day is an

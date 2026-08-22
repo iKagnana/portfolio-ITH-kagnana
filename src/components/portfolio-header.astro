@@ -1,13 +1,12 @@
 ---
-
+import { NavigationMenu } from "./navigation-menu";
 ---
 
 <header class="fixed top-0 left-0 right-0 z-50 bg-background/90">
   <!-- Desktop Navigation -->
   <div class="hidden md:fixed md:block top-6 left-1/2 -translate-x-1/2 z-50">
-    <nav
-      class="flex items-center gap-8 lg:gap-16 px-8 lg:px-16 py-4 bg-secondary backdrop-blur-sm rounded-full"
-    >
+    <NavigationMenu client:load />
+    <nav class="hidden">
       <a
         href="/#"
         class="group relative text-sm tracking-widest text-primary/70 hover:text-primary transition-colors uppercase"
@@ -25,24 +24,14 @@
         ></span>
       </a>
 
-      <a
-        href="/#projects"
-        class="group relative text-sm tracking-widest text-primary/70 hover:text-primary transition-colors uppercase"
-        >Projects
-        <span
-          class="absolute
-        left-0
-        -bottom-1
-        h-px
-        w-0
-        bg-primary
-        transition-all
-        duration-300
-        ease-out
-        group-hover:w-full"
-        ></span>
-      </a>
-
+      <div class="group relative flex items-center gap-3">
+        <a href="/#projects" class="text-sm uppercase tracking-widest text-primary/70 transition-colors hover:text-primary">Projects</a>
+        <a href="/projects" class="font-mono text-[10px] uppercase tracking-wider text-primary/45 transition-colors hover:text-primary">All work</a>
+      </div>
+      <div class="group relative flex items-center gap-3">
+        <a href="/profile" class="text-sm uppercase tracking-widest text-primary/70 transition-colors hover:text-primary">Profile</a>
+        <a href="/#about" class="font-mono text-[10px] uppercase tracking-wider text-primary/45 transition-colors hover:text-primary">About</a>
+      </div>
       <a
         href="mailto:ikagnana@gmail.com"
         class="group relative text-sm tracking-widest text-primary/70 hover:text-primary transition-colors uppercase"
@@ -95,7 +84,7 @@
   <!-- Mobile Menu -->
   <nav
     id="mobile-menu"
-    class="md:hidden hidden flex-col gap-4 px-6 py-4 bg-secondary/95 backdrop-blur-sm"
+    class="md:hidden hidden flex-col gap-4 rounded-b-2xl border-x border-b border-border bg-secondary/95 px-6 py-4 shadow-sm backdrop-blur-sm"
   >
     <a
       href="/#"
@@ -104,14 +93,16 @@
     </a>
     <a
       href="/#about"
-      class="group relative text-sm tracking-widest text-primary/70 hover:text-primary transition-colors uppercase py-2"
+      class="group relative py-2 text-sm uppercase tracking-widest text-primary/70 transition-colors hover:text-primary"
       >About
     </a>
+    <a href="/profile" class="py-1 pl-4 font-mono text-xs uppercase tracking-wider text-primary/50 hover:text-primary">Profile page</a>
     <a
       href="/#projects"
-      class="group relative text-sm tracking-widest text-primary/70 hover:text-primary transition-colors uppercase py-2"
+      class="group relative py-2 text-sm uppercase tracking-widest text-primary/70 transition-colors hover:text-primary"
       >Projects
     </a>
+    <a href="/projects" class="py-1 pl-4 font-mono text-xs uppercase tracking-wider text-primary/50 hover:text-primary">All projects</a>
     <a
       href="mailto:ikagnana@gmail.com"
       class="group relative text-sm tracking-widest text-primary/70 hover:text-primary transition-colors uppercase py-2"
