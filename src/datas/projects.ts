@@ -320,6 +320,42 @@ const _projects: Project[] = [
       "JDBC/ODBC",
     ],
   },
+  {
+    id: "9",
+    title: "CapSurToi",
+    date: new Date("2025-10-01"),
+    description:
+      "A personal project related to collaborative planning for travels, using a web application built with Next.js and Tailwind CSS.",
+    longDescription:
+      "CapSurToi is a collaborative travel planning web application that allows users to create, share, and manage travel itineraries with friends and family. This is on demo stage. I used V0 and Vercel to create first version of the project. The demo only acts like a visualization of the project, and does not have any backend or database. I am currently working on the backend and database integration to make it fully functional. The application is built using Next.js for server-side rendering and Tailwind CSS for responsive design, ensuring a seamless user experience across devices.",
+    links: {
+      demo: "https://capsurtoi.vercel.app/",
+    },
+    tags: ["NextJS", "TailwindCSS", "TypeScript", "NodeJS", "Personal Project"],
+    features: [
+      "Create and manage travel itineraries",
+      "Collaborate with friends and family on trip planning",
+      "Responsive design for mobile and desktop",
+      "User authentication and profile management",
+      "Real-time updates and notifications for itinerary changes",
+      "Integration with maps and location services",
+      "Customizable travel plans with activities, accommodations, and transportation",
+      "Shareable links for easy access to itineraries",
+      "Search and filter options for destinations and activities",
+      "Future integration with backend and database for full functionality",
+    ],
+    technologies: [
+      "Next.js",
+      "Tailwind CSS",
+      "TypeScript",
+      "Node.js",
+      "Vercel",
+      "React",
+      "JavaScript",
+      "HTML",
+      "CSS",
+    ],
+  },
 ];
 
 export const projects: Project[] = _projects.sort(
