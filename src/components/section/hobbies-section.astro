@@ -3,22 +3,32 @@ const hobbies = [
   {
     title: "Digital and traditional drawing",
     description: "Expressing creativity through art in various forms",
+    icon: "✎",
+    iconLabel: "Drawing icon",
   },
   {
     title: "Reading",
     description: "Diving into stories and discovering new perspectives",
+    icon: "▤",
+    iconLabel: "Reading icon",
   },
   {
     title: "Travel",
     description: "Exploring new cultures and broadening my horizons",
+    icon: "⌁",
+    iconLabel: "Travel icon",
   },
   {
     title: "Music",
     description: "Listening to diverse genres and discovering new artists",
+    icon: "♪",
+    iconLabel: "Music icon",
   },
   {
     title: "Cooking & eating",
     description: "Experimenting with new recipes and flavors",
+    icon: "⌂",
+    iconLabel: "Cooking icon",
   },
 ];
 ---
@@ -36,7 +46,8 @@ const hobbies = [
     <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
       {hobbies.map((hobby) => (
         <article class="group rounded-xl border border-border bg-card p-6 transition-transform duration-200 hover:-translate-y-1 hover:border-primary hover:shadow-[8px_8px_0_hsl(var(--primary)/0.12)]">
-          <div class="mb-10 flex justify-between">
+          <div class="mb-10 flex items-start justify-between">
+            <span class="flex h-10 w-10 items-center justify-center rounded-full border border-primary/30 font-serif text-2xl text-primary" role="img" aria-label={hobby.iconLabel}>{hobby.icon}</span>
             <span class="font-mono text-xs uppercase tracking-wider text-muted-foreground">Interest</span>
           </div>
           <h3 class="text-xl font-semibold tracking-tight group-hover:text-primary">{hobby.title}</h3>
@@ -45,7 +56,7 @@ const hobbies = [
       ))}
     </div>
 
-    <div class="border border-primary bg-primary p-8 text-primary-foreground">
+    <div class="rounded-xl border border-primary bg-primary p-8 text-primary-foreground">
       <h3 class="text-2xl font-bold mb-3">Always Seeking New Experiences</h3>
       <p class="text-lg opacity-90">
         I believe that life is a continuous adventure. Every day is an
