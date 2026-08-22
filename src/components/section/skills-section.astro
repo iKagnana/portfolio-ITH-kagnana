@@ -41,18 +41,17 @@ const skillCategories = [
   <div class="mx-auto max-w-6xl">
     <div class="mb-14 grid gap-5 md:grid-cols-[1fr_1.2fr] md:items-end">
       <div>
-        <p class="mb-3 font-mono text-xs uppercase tracking-[0.25em] text-primary/60">03 / Toolkit</p>
+        <p class="mb-3 font-mono text-xs uppercase tracking-[0.25em] text-primary/60">Toolkit</p>
         <h2 class="text-4xl font-bold tracking-tight md:text-5xl">Skills</h2>
       </div>
       <p class="max-w-xl text-sm leading-7 text-muted-foreground">A practical toolkit spanning product interfaces, software systems, and the habits that make collaboration work.</p>
     </div>
 
     <div class="grid gap-5 md:grid-cols-2">
-      {skillCategories.map((category, index) => (
-        <article class="border border-border bg-card p-7 transition-transform duration-200 hover:-translate-y-1 hover:border-primary hover:shadow-[8px_8px_0_hsl(var(--primary)/0.12)] md:p-8">
+      {skillCategories.map((category) => (
+        <article class="rounded-xl border border-border bg-card p-7 transition-transform duration-200 hover:-translate-y-1 hover:border-primary hover:shadow-[8px_8px_0_hsl(var(--primary)/0.12)] md:p-8">
           <div class="mb-8 flex items-center justify-between">
             <h3 class="text-lg font-semibold tracking-tight">{category.category}</h3>
-            <span class="font-mono text-xs text-primary/60">0{index + 1}</span>
           </div>
           <div class="flex flex-wrap gap-2">
             {category.skills.map((skill) => (

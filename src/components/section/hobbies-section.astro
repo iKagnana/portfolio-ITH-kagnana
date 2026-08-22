@@ -3,27 +3,22 @@ const hobbies = [
   {
     title: "Digital and traditional drawing",
     description: "Expressing creativity through art in various forms",
-    index: "01",
   },
   {
     title: "Reading",
     description: "Diving into stories and discovering new perspectives",
-    index: "02",
   },
   {
     title: "Travel",
     description: "Exploring new cultures and broadening my horizons",
-    index: "03",
   },
   {
     title: "Music",
     description: "Listening to diverse genres and discovering new artists",
-    index: "04",
   },
   {
     title: "Cooking & eating",
     description: "Experimenting with new recipes and flavors",
-    index: "05",
   },
 ];
 ---
@@ -32,7 +27,7 @@ const hobbies = [
   <div class="mx-auto max-w-6xl space-y-12">
     <div class="grid gap-5 md:grid-cols-[1fr_1.2fr] md:items-end">
       <div>
-        <p class="mb-3 font-mono text-xs uppercase tracking-[0.25em] text-primary/60">05 / Off-screen</p>
+        <p class="mb-3 font-mono text-xs uppercase tracking-[0.25em] text-primary/60">Off-screen</p>
         <h2 class="text-4xl font-bold tracking-tight md:text-5xl">Hobbies</h2>
       </div>
       <p class="max-w-xl text-sm leading-7 text-muted-foreground">The interests that keep curiosity active beyond the screen and bring fresh perspective back into my work.</p>
@@ -40,9 +35,8 @@ const hobbies = [
 
     <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
       {hobbies.map((hobby) => (
-        <article class="group border border-border bg-card p-6 transition-transform duration-200 hover:-translate-y-1 hover:border-primary hover:shadow-[8px_8px_0_hsl(var(--primary)/0.12)]">
+        <article class="group rounded-xl border border-border bg-card p-6 transition-transform duration-200 hover:-translate-y-1 hover:border-primary hover:shadow-[8px_8px_0_hsl(var(--primary)/0.12)]">
           <div class="mb-10 flex justify-between">
-            <span class="font-mono text-xs text-primary/60">{hobby.index}</span>
             <span class="font-mono text-xs uppercase tracking-wider text-muted-foreground">Interest</span>
           </div>
           <h3 class="text-xl font-semibold tracking-tight group-hover:text-primary">{hobby.title}</h3>
