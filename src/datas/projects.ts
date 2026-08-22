@@ -223,7 +223,7 @@ const _projects: Project[] = [
     longDescription:
       "A complete IoT system for tracking classroom keys in real-time using RFID/NFC technology with Arduino Uno R4 WiFi and RC522 readers. The system implements a ZigBee mesh network (XBee S2C modules) for reliable communication across 40+ rooms. Data is transmitted via MQTT protocol to an Edge Computing gateway that processes events locally without cloud dependency. The architecture includes a Python backend with Flask and SocketIO for real-time dashboard updates, and a React-based frontend for visualizing key states (IN/OUT). The system features local storage of events, secure communication with AES encryption, and automatic room discovery. Perfect for educational institutions needing to track physical key distribution with modern IoT technologies.",
     links: {
-      github: "https://github.com/yourusername/cesi-smart-key-system",
+      github: "https://github.com/Nej-ma/keybox-iot",
     },
     tags: [
       "IoT",
@@ -235,7 +235,7 @@ const _projects: Project[] = [
       "Python",
       "Flask",
       "React",
-      "FISA INFO A3",
+      "FISA INFO A4",
     ],
     features: [
       "Real-time key tracking with RFID/NFC technology",
@@ -275,7 +275,7 @@ const _projects: Project[] = [
     longDescription:
       "A comprehensive Big Data architecture for healthcare analytics that processes and analyzes medical data from various sources. The system implements a Lakehouse pattern using Delta Lake as the storage layer, Apache Spark for distributed data processing, and Trino as the SQL query engine. PostgreSQL serves as the initial data source, with MinIO providing object storage simulating a data lake. The architecture enables analysis of consultation rates, hospitalization trends, patient demographics, and satisfaction metrics across different regions and time periods. The solution includes data ingestion pipelines, transformation workflows, and visualization dashboards in Apache Superset. All components are containerized using Docker for easy deployment and scalability.",
     links: {
-      github: "https://github.com/yourusername/big-data-health-lakehouse",
+      github: "https://github.com/iKagnana/environnement_bigdata",
     },
     tags: [
       "Big Data",
@@ -289,6 +289,7 @@ const _projects: Project[] = [
       "Docker",
       "Python",
       "SQL",
+      "FISA INFO A4",
     ],
     features: [
       "Lakehouse architecture with Delta Lake storage",
