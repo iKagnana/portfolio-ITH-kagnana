@@ -26,22 +26,40 @@ const values = [
     <p
       class="mx-auto mb-10 max-w-3xl text-center leading-relaxed text-muted-foreground"
     >
-      I am a passionate iOS developer and software engineering student based in
-      Lyon, France. I combine curiosity and a thirst for knowledge. I aspire to
-      collaborate with people from all over the world to create innovative
-      applications that shape the future.
+      I am an iOS developer and a Computer Science student based in Lyon,
+      France. I have a deep passion for building innovative applications and
+      collaborating with people worldwide. To become a more versatile and
+      autonomous engineer, I am currently diving into DevOps, DevSecOps, and
+      infrastructure security—bridging the gap between creative development and
+      robust, secure deployments.
     </p>
 
     <div class="mx-auto mb-12 grid max-w-3xl gap-4 sm:grid-cols-2">
-      <div class="rounded-lg border border-border bg-background p-5 text-left shadow-sm">
-        <p class="mb-2 font-mono text-xs uppercase tracking-wider text-primary/60">Current position</p>
+      <div
+        class="rounded-lg border border-border bg-background p-5 text-left shadow-sm"
+      >
+        <p
+          class="mb-2 font-mono text-xs uppercase tracking-wider text-primary/60"
+        >
+          Current position
+        </p>
         <p class="font-semibold text-foreground">iOS Developer</p>
         <p class="mt-1 text-sm text-muted-foreground">WIMOVA · Lyon, France</p>
       </div>
-      <div class="rounded-lg border border-border bg-background p-5 text-left shadow-sm">
-        <p class="mb-2 font-mono text-xs uppercase tracking-wider text-primary/60">Current education</p>
-        <p class="font-semibold text-foreground">Engineering degree in Computer Science</p>
-        <p class="mt-1 text-sm text-muted-foreground">CESI · Cybersecurity track</p>
+      <div
+        class="rounded-lg border border-border bg-background p-5 text-left shadow-sm"
+      >
+        <p
+          class="mb-2 font-mono text-xs uppercase tracking-wider text-primary/60"
+        >
+          Current education
+        </p>
+        <p class="font-semibold text-foreground">
+          Engineering degree in Computer Science
+        </p>
+        <p class="mt-1 text-sm text-muted-foreground">
+          CESI · Cybersecurity track
+        </p>
       </div>
     </div>
 
@@ -64,9 +82,7 @@ const values = [
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6 px-6">
         {
           values.map((value) => (
-            <div
-              class="bg-background p-6 flex flex-col items-center justify-center gap-3 border-0 shadow-sm rounded-lg"
-            >
+            <div class="bg-background p-6 flex flex-col items-center justify-center gap-3 border-0 shadow-sm rounded-lg">
               <img
                 src={value.icon}
                 alt={`${value.label} icon`}
