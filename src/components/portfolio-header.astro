@@ -6,6 +6,8 @@
   <!-- Desktop Navigation -->
   <div class="hidden md:fixed md:block top-6 left-1/2 -translate-x-1/2 z-50">
     <nav
+      aria-label="Primary navigation"
+      data-slot="navigation-menu"
       class="flex items-center gap-8 rounded-full border border-border bg-secondary px-8 py-4 shadow-sm backdrop-blur-sm lg:gap-16"
     >
       <a
@@ -33,25 +35,6 @@
         <a href="/profile" class="text-sm uppercase tracking-widest text-primary/70 transition-colors hover:text-primary">Profile</a>
         <a href="/#about" class="font-mono text-[10px] uppercase tracking-wider text-primary/45 transition-colors hover:text-primary">About</a>
       </div>
-      <!-- legacy project underline -->
-      <a
-        href="/#projects"
-        class="hidden group relative text-sm tracking-widest text-primary/70 hover:text-primary transition-colors uppercase"
-        >Projects
-        <span
-          class="absolute
-        left-0
-        -bottom-1
-        h-px
-        w-0
-        bg-primary
-        transition-all
-        duration-300
-        ease-out
-        group-hover:w-full"
-        ></span>
-      </a>
-
       <a
         href="mailto:ikagnana@gmail.com"
         class="group relative text-sm tracking-widest text-primary/70 hover:text-primary transition-colors uppercase"
