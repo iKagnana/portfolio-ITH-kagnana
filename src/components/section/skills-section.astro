@@ -37,32 +37,30 @@ const skillCategories = [
 ];
 ---
 
-<section class="py-20 px-4 md:px-8 lg:px-16 max-w-6xl mx-auto">
-  <div class="max-w-6xl mx-auto">
-    <div class="mb-12">
-      <h2 class="text-4xl md:text-5xl font-bold mb-2 text-balance">
-        My Skills
-      </h2>
-      <div class="h-1 w-20 bg-primary rounded-full"></div>
+<section id="skills" class="px-4 py-24 md:px-8 lg:px-16">
+  <div class="mx-auto max-w-6xl">
+    <div class="mb-14 grid gap-5 md:grid-cols-[1fr_1.2fr] md:items-end">
+      <div>
+        <p class="mb-3 font-mono text-xs uppercase tracking-[0.25em] text-primary/60">03 / Toolkit</p>
+        <h2 class="text-4xl font-bold tracking-tight md:text-5xl">Skills</h2>
+      </div>
+      <p class="max-w-xl text-sm leading-7 text-muted-foreground">A practical toolkit spanning product interfaces, software systems, and the habits that make collaboration work.</p>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-8">
-      {
-        skillCategories.map((category) => (
-          <div class="space-y-4">
-            <h3 class="text-xl font-semibold text-foreground">
-              {category.category}
-            </h3>
-            <div class="flex flex-wrap gap-2">
-              {category.skills.map((skill) => (
-                <span class="px-4 py-2 bg-primary text-primary-foreground rounded-full text-sm font-medium hover:opacity-90 transition-opacity">
-                  {skill}
-                </span>
-              ))}
-            </div>
+    <div class="grid gap-5 md:grid-cols-2">
+      {skillCategories.map((category, index) => (
+        <article class="border border-border bg-card p-7 transition-transform duration-200 hover:-translate-y-1 hover:border-primary hover:shadow-[8px_8px_0_hsl(var(--primary)/0.12)] md:p-8">
+          <div class="mb-8 flex items-center justify-between">
+            <h3 class="text-lg font-semibold tracking-tight">{category.category}</h3>
+            <span class="font-mono text-xs text-primary/60">0{index + 1}</span>
           </div>
-        ))
-      }
+          <div class="flex flex-wrap gap-2">
+            {category.skills.map((skill) => (
+              <span class="border border-border px-3 py-1 font-mono text-xs text-muted-foreground transition-colors hover:border-primary hover:text-primary">{skill}</span>
+            ))}
+          </div>
+        </article>
+      ))}
     </div>
 
     <div class="mt-12 gap-8">
