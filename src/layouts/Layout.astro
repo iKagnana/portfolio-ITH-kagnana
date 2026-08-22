@@ -22,7 +22,7 @@ const { title } = Astro.props;
     <ClientRouter />
   </head>
   <body>
-    <PortfolioHeader />
+    <PortfolioHeader client:load />
     <slot />
     <Footer />
   </body>

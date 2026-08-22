@@ -1,137 +1,21 @@
 ---
+// Import the React component
 import { NavigationMenu } from "./navigation-menu";
 ---
 
-<header class="fixed top-0 left-0 right-0 z-50 bg-background/90">
-  <!-- Desktop Navigation -->
-  <div class="hidden md:fixed md:block top-6 left-1/2 -translate-x-1/2 z-50">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Kagnana ITH Portfolio</title>
+  </head>
+  <body>
+    <!-- client:load ensures the state/clicks work right on page load -->
     <NavigationMenu client:load />
-    <nav class="hidden">
-      <a
-        href="/#"
-        class="group relative text-sm tracking-widest text-primary/70 hover:text-primary transition-colors uppercase"
-        >Home
-        <span
-          class="absolute left-0 -bottom-1 h-px w-0 bg-primary transition-all duration-300 ease-out group-hover:w-full"
-        ></span>
-      </a>
-      <a
-        href="/#about"
-        class="group relative text-sm tracking-widest text-primary/70 hover:text-primary transition-colors uppercase"
-        >About
-        <span
-          class="absolute left-0 -bottom-1 h-px w-0 bg-primary transition-all duration-300 ease-out group-hover:w-full"
-        ></span>
-      </a>
 
-      <div class="group relative flex items-center gap-3">
-        <a href="/#projects" class="text-sm uppercase tracking-widest text-primary/70 transition-colors hover:text-primary">Projects</a>
-        <a href="/projects" class="font-mono text-[10px] uppercase tracking-wider text-primary/45 transition-colors hover:text-primary">All work</a>
-      </div>
-      <div class="group relative flex items-center gap-3">
-        <a href="/profile" class="text-sm uppercase tracking-widest text-primary/70 transition-colors hover:text-primary">Profile</a>
-        <a href="/#about" class="font-mono text-[10px] uppercase tracking-wider text-primary/45 transition-colors hover:text-primary">About</a>
-      </div>
-      <a
-        href="mailto:ikagnana@gmail.com"
-        class="group relative text-sm tracking-widest text-primary/70 hover:text-primary transition-colors uppercase"
-        >Contact
-        <span
-          class="absolute left-0 -bottom-1 h-px w-0 bg-primary transition-all duration-300 ease-out group-hover:w-full"
-        ></span>
-      </a>
-    </nav>
-  </div>
-
-  <!-- Mobile Navigation -->
-  <div class="md:hidden flex items-center justify-between px-6 py-4">
-    <a href="/#" class="text-primary font-semibold text-lg tracking-wide">KI</a>
-
-    <button
-      id="mobile-menu-button"
-      class="text-primary/70 hover:text-primary transition-colors focus:outline-none"
-      aria-label="Toggle menu"
-    >
-      <svg
-        id="menu-icon"
-        class="w-6 h-6"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M4 6h16M4 12h16M4 18h16"></path>
-      </svg>
-      <svg
-        id="close-icon"
-        class="w-6 h-6 hidden"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M6 18L18 6M6 6l12 12"></path>
-      </svg>
-    </button>
-  </div>
-
-  <!-- Mobile Menu -->
-  <nav
-    id="mobile-menu"
-    class="md:hidden hidden flex-col gap-4 rounded-b-2xl border-x border-b border-border bg-secondary/95 px-6 py-4 shadow-sm backdrop-blur-sm"
-  >
-    <a
-      href="/#"
-      class="group relative text-sm tracking-widest text-primary/70 hover:text-primary transition-colors uppercase py-2"
-      >Home
-    </a>
-    <a
-      href="/#about"
-      class="group relative py-2 text-sm uppercase tracking-widest text-primary/70 transition-colors hover:text-primary"
-      >About
-    </a>
-    <a href="/profile" class="py-1 pl-4 font-mono text-xs uppercase tracking-wider text-primary/50 hover:text-primary">Profile page</a>
-    <a
-      href="/#projects"
-      class="group relative py-2 text-sm uppercase tracking-widest text-primary/70 transition-colors hover:text-primary"
-      >Projects
-    </a>
-    <a href="/projects" class="py-1 pl-4 font-mono text-xs uppercase tracking-wider text-primary/50 hover:text-primary">All projects</a>
-    <a
-      href="mailto:ikagnana@gmail.com"
-      class="group relative text-sm tracking-widest text-primary/70 hover:text-primary transition-colors uppercase py-2"
-      >Contact
-    </a>
-  </nav>
-</header>
-
-<script>
-  const mobileMenuButton = document.getElementById("mobile-menu-button");
-  const mobileMenu = document.getElementById("mobile-menu");
-  const menuIcon = document.getElementById("menu-icon");
-  const closeIcon = document.getElementById("close-icon");
-
-  mobileMenuButton?.addEventListener("click", () => {
-    mobileMenu?.classList.toggle("hidden");
-    mobileMenu?.classList.toggle("flex");
-    menuIcon?.classList.toggle("hidden");
-    closeIcon?.classList.toggle("hidden");
-  });
-
-  // Close mobile menu when clicking on a link
-  const mobileLinks = mobileMenu?.querySelectorAll("a");
-  mobileLinks?.forEach((link) => {
-    link.addEventListener("click", () => {
-      mobileMenu?.classList.add("hidden");
-      mobileMenu?.classList.remove("flex");
-      menuIcon?.classList.remove("hidden");
-      closeIcon?.classList.add("hidden");
-    });
-  });
-</script>
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>
