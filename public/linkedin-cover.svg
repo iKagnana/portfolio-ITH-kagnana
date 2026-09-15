@@ -1,39 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1584" height="396" viewBox="0 0 1584 396" role="img" aria-labelledby="title desc">
   <title id="title">Kagnana ITH LinkedIn cover</title>
-  <desc id="desc">Software Engineer, iOS and Full Stack Developer</desc>
+  <desc id="desc">A warm, minimal portfolio-inspired banner for a software developer.</desc>
   <defs>
-    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0b1020"/>
-      <stop offset="0.55" stop-color="#111827"/>
-      <stop offset="1" stop-color="#26134f"/>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#faf9f8"/>
+      <stop offset="1" stop-color="#f1efec"/>
     </linearGradient>
-    <radialGradient id="glow" cx="78%" cy="40%" r="55%">
-      <stop offset="0" stop-color="#7c3aed" stop-opacity=".32"/>
-      <stop offset="1" stop-color="#7c3aed" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="line" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#38bdf8" stop-opacity=".1"/>
-      <stop offset="1" stop-color="#a78bfa" stop-opacity=".65"/>
-    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#5d5853" stroke-opacity=".07" stroke-width="1"/>
+    </pattern>
   </defs>
-  <rect width="1584" height="396" fill="url(#background)"/>
-  <rect width="1584" height="396" fill="url(#glow)"/>
-  <g fill="none" stroke="url(#line)" stroke-width="2">
-    <path d="M820 318 1010 154 1185 248 1370 76 1570 148"/>
-    <path d="M945 396 1120 235 1302 300 1458 176 1584 214"/>
-    <path d="M1090 0 1185 248 1370 76"/>
+  <rect width="1584" height="396" fill="url(#paper)"/>
+  <rect width="1584" height="396" fill="url(#grid)"/>
+  <circle cx="1370" cy="-42" r="245" fill="#ddd8d1" fill-opacity=".6"/>
+  <circle cx="1460" cy="42" r="175" fill="none" stroke="#5d5853" stroke-opacity=".16" stroke-width="2"/>
+  <path d="M0 330C250 255 420 380 675 304S1125 220 1584 300V396H0Z" fill="#e8e4df" fill-opacity=".72"/>
+  <path d="M0 348C260 282 440 392 690 324S1140 254 1584 318" fill="none" stroke="#5d5853" stroke-opacity=".18" stroke-width="2"/>
+  <g transform="translate(108 92)">
+    <rect width="58" height="58" rx="16" fill="#5d5853"/>
+    <path d="M17 17h24c5 0 9 4 9 9v6c0 5-4 9-9 9H29l-12 10V17Z" fill="#faf9f8"/>
+    <circle cx="28" cy="29" r="3" fill="#5d5853"/>
+    <circle cx="38" cy="29" r="3" fill="#5d5853"/>
   </g>
-  <g fill="#8b5cf6">
-    <circle cx="1010" cy="154" r="5"/><circle cx="1185" cy="248" r="7"/><circle cx="1370" cy="76" r="5"/><circle cx="1458" cy="176" r="4"/>
-  </g>
-  <g fill="#38bdf8" opacity=".8">
-    <circle cx="945" cy="396" r="4"/><circle cx="1120" cy="235" r="5"/><circle cx="1302" cy="300" r="4"/>
-  </g>
-  <g transform="translate(790 126)">
-    <rect width="64" height="64" rx="16" fill="#7c3aed" opacity=".95"/>
-    <path d="M19 22h26v8H27v7h15v8H27v10h-8V22Zm30 0h8v33h-8V22Z" fill="#fff"/>
-  </g>
-  <text x="790" y="250" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="700" letter-spacing="-.5">Kagnana ITH</text>
-  <text x="793" y="286" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="22" letter-spacing="1">SOFTWARE ENGINEER · iOS &amp; FULL STACK DEVELOPER</text>
-  <path d="M790 316h380" stroke="#38bdf8" stroke-width="3" stroke-linecap="round"/>
+  <text x="108" y="220" fill="#433f3b" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="52" font-weight="700" letter-spacing="-1.5">Kagnana ITH</text>
+  <text x="112" y="266" fill="#5d5853" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="24" font-weight="500" letter-spacing="3">SOFTWARE DEVELOPER</text>
+  <line x1="112" y1="294" x2="282" y2="294" stroke="#5d5853" stroke-width="3" stroke-linecap="round"/>
+  <text x="112" y="333" fill="#716a63" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="18" font-weight="400">Building thoughtful systems, one service at a time.</text>
 </svg>
